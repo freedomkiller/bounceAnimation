@@ -62,7 +62,10 @@
 //        bounceAnimationImage.center.y = point.y;
         [bounceAnimationImage setCenter:point];
     } completion:^(BOOL finished) {
-        bounceAnimationImage.backgroundColor = [UIColor redColor];
+        //动画完成，改变颜色
+        [UIView animateWithDuration:2 animations:^{
+            bounceAnimationImage.backgroundColor = [UIColor redColor];
+        }];
     }];
     
     
